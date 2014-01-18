@@ -24,16 +24,17 @@ $(document).ready(function () {      // When page is loaded, start playing the f
 
 		onSearch : function () {
 
-			console.log('onSearch loaded');
 			this.choice = $('input.input').val();  // stores the input in var choice
 			console.log(this.choice);
 			this.search(this.choice);     // plays the search function
 		},
 
 		onTagSearch: function (e) {
+
+			console.log ('onTagSearch works');
 			e.preventDefault();
-			var $a = $(e.currentTarget);
-			this.choice = $a.text();
+			var tag = $(e.currentTarget);
+			this.choice = tag.text();
 			console.log(this.choice);
 			this.search(this.choice);
 		},
@@ -49,11 +50,11 @@ $(document).ready(function () {      // When page is loaded, start playing the f
 			})
 			.done(function (r) {  // when the query is done, play this function
 
-				console.log(r);  // displays object returned by api
 				var result = r.data; // stores it in a variable
 				console.log(result); 
 				console.log(result[0].images.standard_resolution.url);  //  logs photo's url
-				$('#image, #tags ul').empty();  // empties the html spots that will be used to display the photo
+				 // empties the html spots that will be used to display the photo
+				$('#image, #tags ul').empty(); 
 				$('#image').append('<img src="' + result[0].images.standard_resolution.url + '" />'); // insert the photo url in the source of an html img element to #image in the html
 				$('#image').append('<p>' + result[0].caption.text + '</p>'); // displays caption text of the image
 
@@ -61,6 +62,8 @@ $(document).ready(function () {      // When page is loaded, start playing the f
 					$('#tags ul').append('<li><a href="http://www.romainmalnoult.com">' + result[0].tags[i] + '</a></li>');
 				}; // displays every tags associated with the photo that is being displayed
 
+
+				// Listening for clicks on tags
 				$('a').on('click', $.proxy(this.onTagSearch, this));
 			})
 		}
