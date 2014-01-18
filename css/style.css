@@ -1,0 +1,162 @@
+/** 
+    *@site Pearlstagram
+    *version du fichier 1.0
+    *@lastmodified 2013.12.18
+    *@author Romain Malnoult
+*/
+
+body {
+	margin: auto;
+	background-color: #999;
+	font-family: 'Lato', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+h1 {
+	text-shadow: #FFF 2px 2px 0px,
+	#FFF -2px 2px 0px,
+	#FFF -2px -2px 0px,
+	#FFF 2px -2px 0px; 
+	font-weight: 900;
+	float: left;
+
+
+	-webkit-transition: all 0.4s ;
+	transition: all 0.4s ;
+}
+h1:hover {
+	text-shadow: #FFF 2px 2px 10px,
+	#FFF -2px 2px 10px,
+	#FFF -2px -2px 10px,
+	#FFF 2px -2px 10px; 
+}
+header {
+	padding: 0 100px 20px 100px;
+	margin: 0 0 20px 0px;
+	background-color: #333333;
+}
+header p {
+	clear: both;
+	margin-top: 0;
+	color: #fff;
+}
+.clear {
+	clear: both;
+}
+
+#tags {
+	padding: 0 100px;
+	height: auto;
+	width: 600px;
+}
+#tags a {
+	text-transform: uppercase;
+	color: #444;
+	text-decoration: none;
+	padding: 20px 20px;
+	font-weight: bold;
+	-webkit-transition: all 0.8s;
+	transition: all 0.8s;
+	background-color:#333333;
+	display:inline-block;
+	cursor:pointer;
+	text-decoration:none;
+	color: #fff;
+
+
+}
+
+
+#tags a:active, #tags a:focus, #tags a:hover {
+
+	background-color: #019875;
+	color: #eee;
+
+}
+input {
+	height: 40px;
+	width: 200px;
+	margin: 30px 0px 0 0;
+	border: none;	
+	float: right;
+
+}
+
+input:active, input:focus, input:hover {
+	-webkit-box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+	box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+}
+.go {
+	height: 42px;
+	width: 50px;
+	background-image: url('../ico/search.png');
+	background-repeat: no-repeat;
+	background-position: 12px 7px;
+	margin-left: -3px;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.go:active, .go:focus, .go:hover {
+	-webkit-box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+	box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.4);
+}
+
+#image {
+	position: relative;
+	margin: 0 100px;
+	float: right;
+
+
+}
+
+#image img {
+	width: 400px;
+	height: auto;
+	border: 30px solid #eee;
+	border-bottom: 90px solid #eee;
+	-webkit-box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.4);
+	box-shadow: 0px 5px 5px 5px rgba(0,0,0,0.4);
+}
+
+#image p {
+	float: right;
+    left: 30px;
+    position: absolute;
+    bottom: 10px;
+    max-width: 350px;
+    max-height: 40px;
+    overflow: hidden;
+
+}
+
+#tags {
+	height: auto;
+	width: 580px;
+}
+
+#tags ul {
+	margin: 0;
+	padding: 0;
+}
+#tags li {
+
+	display: inline-block;
+	list-style-type: none;
+	margin: 5px 5px;
+	padding: 20px 20px;
+
+}
+
+footer p {
+	position: relative;
+	bottom: 0px;
+	left: 150px;
+	    color: #888888;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+}
