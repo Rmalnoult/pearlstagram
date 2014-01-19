@@ -48,7 +48,7 @@ $(document).ready(function () {      // When page is loaded, start playing the f
 				url: 'https://api.instagram.com/v1/tags/' + choice + '/media/recent?access_token=32168991.82908a0.5f31d75438944306a39a0ded8af7204e&count=1', // asks instagram for one picture with the tag the user chooses (choice)
 				dataType: 'jsonp'  // asks for json
 			})
-			.done(function (r) {  // when the query is done, play this function
+			.done($.proxy(function (r) {  // when the query is done, play this function
 
 				var result = r.data; // stores it in a variable
 				console.log(result); 
@@ -65,7 +65,7 @@ $(document).ready(function () {      // When page is loaded, start playing the f
 
 				// Listening for clicks on tags
 				$('a').on('click', $.proxy(this.onTagSearch, this));
-			})
+			}, this));
 		}
 	}
 
